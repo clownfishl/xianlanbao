@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/ucenter/login/login",
+    "pages/ucenter/register/register",
+
     "pages/ucenter/ucenter",
     "pages/ucenter/orderManager/orderManager",
     "pages/ucenter/address/address",
@@ -12,8 +15,8 @@
     "pages/ucenter/userMsg/reviseMsg/reviseMsg",
     "pages/ucenter/userMsg/userMsg",
     "pages/ucenter/complain/complain",
-    "pages/ucenter/register/register",
-    "pages/ucenter/login/login",
+    
+   
     "pages/catalog/con_order/con_order",
     "pages/catalog/details/details",
     
