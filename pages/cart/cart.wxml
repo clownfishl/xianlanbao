@@ -1,0 +1,51 @@
+<!--pages/catalog/cart/cart.wxml-->
+<view>
+  <view class='cart_type' wx:for="{{cartItem}}"wx:for-index="index" wx:for-itme="{{item}}" wx:key="item">
+   <view class="cart-radio">
+     <icon wx:if="{{cart}}" type="success_circle" size="20"  />
+      <icon wx:else type="circle" size="20"  />
+    </view>
+   <!-- <view class='cart_left'></view> -->
+    <view class='cart_middle' >
+      <view>商品名称 <text> YJV</text></view>
+      <view class='bottom'>型号，规格，电压</view>
+      <text class='disc'>￥{{item.price}}</text>
+      <view class='orig'><text>299.00</text></view>
+      
+    </view>
+    <view class='cart_right'>
+      <view class='bottom'>
+          <image src='../../../static/images/index_star_active.png'></image>
+          <image src='../../../static/images/index_star_active.png'></image>
+          <image src='../../../static/images/index_star_active.png'></image>
+          <image src='../../../static/images/index_star_active.png'></image>
+          <image src='../../../static/images/index_star.png'></image>
+      </view>
+      <view >
+        <image src='../../../static/images/cart-.png' bindtap='bindMinus' data-lid="{{item.inventory_id}}" data-index="{{index}}" > </image>
+        <text class='number_border'>{{item.cartNum}}</text>
+         <image src='../../../static/images/cart+.png' bindtap='bindPlus' data-lid="{{item.inventory_id}}" data-index="{{index}}"></image>
+      </view>
+    </view>
+  
+  </view>
+  
+  
+  
+  
+  <view class='cart_bottom'>
+    <view>总价 ￥1199.00</view>
+    <view><text>优惠价</text> ￥960</view>
+    
+  </view>
+  <view class='bottom_order'>
+    <view class="bottom_icon">
+     <icon wx:if="{{cart}}" type="success_circle" size="20"  />
+     <icon wx:else type="circle" size="20"  />
+      <text>全选</text>
+    </view>
+     <text>合计:</text>
+      <text>￥10000.00</text>
+      <button  bindtap='pay'>结算(1)</button>
+  </view>
+</view>

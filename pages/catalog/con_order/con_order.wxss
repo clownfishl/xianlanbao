@@ -1,0 +1,142 @@
+/* pages/catalog/cart/con_order/con_order.wxss */
+.icon-jiajian1:before{ content: "\e64a";font-size: 40rpx; color:#999; }
+.icon-jiajian:before{ content: "\e64b";font-size: 40rpx; color:#999; }
+
+.container{
+  width:100%!important;
+}
+.address_details{
+  display: block;
+  padding:30rpx 30rpx;
+  border-bottom:1rpx solid #f4f4f4;
+  box-sizing:border-box;
+}
+.address_details .receiver{
+  margin-right:20rpx;
+}
+.address_details>view:nth-child(2){
+  padding-bottom:10rpx;
+}
+.mo_invoice{
+  color:#0075C1;
+}
+.mo_address{
+  display: flex;
+  flex-flow: row wrap;
+}
+.default{
+  height:40rpx;
+  padding:0rpx 20rpx;
+  margin:40rpx 40rpx 20rpx 0rpx;
+  border:1px solid #0075C1;
+  color:#0075C1;
+  border-radius: 30rpx;
+  vertical-align: center;
+  font-size:26rpx ;
+}
+.default_right{
+ width:80%;
+ margin-top:35rpx;
+}
+.order_details{
+  display: block;
+  padding:10rpx 30rpx;
+  border-bottom:1rpx solid #f4f4f4;
+  box-sizing:border-box;
+}
+.order_details view{
+  height:90rpx;
+  line-height:90rpx;
+  border-bottom:1rpx solid #f5f5f5;
+}
+.order_details view:last-child{
+  border:none;
+}
+.order_details>view>text{
+  float:right;
+}
+.order_details>view:nth-child(5){
+  position:relative;
+}
+.order_details .numb{
+  position:absolute;
+  right:0rpx;
+  top:8rpx;
+}
+.numb input{
+  position:absolute;
+  display:inline-block;
+  width:240rpx;
+  line-height:40rpx;
+  text-align:center;
+  border:1rpx solid #eee;
+  border-radius:40rpx;
+  vertical-align:middle;
+  box-sizing: border-box;
+  top:17rpx;
+  right:54rpx;
+}
+.numb icon{
+  display:inline-block;
+  vertical-align:middle;
+  padding-bottom:11rpx;
+}
+.icon-jiajian1{
+  margin-left:20rpx;
+}
+.icon-jiajian{
+  margin-right:255rpx;
+}
+.normal{
+  color:black;
+}
+.disabled{
+ color:#ccc;
+}
+
+.order_invoice{
+  display:flex;
+  width:100%;
+  height:90rpx;
+  padding:0 30rpx;
+  line-height:90rpx;
+  justify-content:space-between;
+  box-sizing: border-box;
+}
+.mo_invoice,.no_invoice{
+  float: right;
+  margin-left: 30rpx;
+}
+
+
+
+.bottom_order{
+  position: fixed;
+	bottom: 0rpx;
+  right: 0rpx;
+	width:100%;
+  height:100rpx;
+  background:#fff;
+  border-top:1px solid #f2f2f2;
+}
+.bottom_order view{
+  display:inline-block;
+  height:110rpx;
+  padding:0 20rpx;
+  line-height:110rpx;
+  font-size: 30rpx;
+}
+.bottom_order view text{
+  font-size: 33rpx;
+  color:#0075c1;
+}
+.bottom_order button{
+  display: inline-block;
+  background:#0075C1;
+  border-radius: 0;
+  width:50%;
+  height:110rpx;
+  line-height: 110rpx;
+  color:#fff;
+  float: right;
+}

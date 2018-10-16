@@ -1,0 +1,15 @@
+<!--pages/ucenter/complain/complain.wxml-->
+<view class="contain">
+  <view class="content">
+    <textarea placeholder="请输入您对我们的投诉与建议" bindinput="inputChange"></textarea>
+  </view>
+  <view class="starlevel">
+    <view>
+      <block wx:for="{{iconList}}" wx:key="iconItem">
+        <icon class="iconfont {{item}}" bindtap="iconClick" data-index="{{index}}"></icon>
+      </block>
+    </view>
+    <text>请评价我们的服务，促进我们提升我们的服务质量</text>
+  </view>
+  <button class="sub">提交</button>
+</view>

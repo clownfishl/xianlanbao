@@ -1,0 +1,128 @@
+/* pages/catalog/cart/cart.wxss */
+page{
+  font-size:30rpx;
+  color:#333;
+  background:#fff;
+
+}
+.cart_type{
+  display: flex;
+  padding:30rpx 0 10rpx ;
+  border-bottom:1px solid #797979;
+  margin:0 10rpx;
+}
+image{
+  width:40rpx;
+  height:40rpx;
+}
+.cart_type view.cart-radio{
+  
+  margin:45rpx 20rpx;
+}
+.cart_type view.cart_right{
+  margin-left:150rpx;
+}
+.bottom{
+  margin-bottom: 20rpx;
+}
+.cart_right .bottom{
+  margin-bottom:40rpx;
+}
+.cart_right>view:nth-child(2){
+  /* border:1px solid red; */
+}
+.cart_right>view:nth-child(2)>image{
+  width:30rpx;height:30rpx;
+  position:relative;
+  top:5rpx;
+}
+.cart_right text.number_border{
+  display: inline-block;
+  width:100rpx;
+  height:40rpx;
+  border:1px solid #A9A9A9;
+  margin:0 10rpx;
+  text-align: center;
+  font-size:28rpx;
+}
+text.disc{
+  display: inline-block;  
+  color:red; 
+ 
+ 
+}
+view.orig{
+  display: inline-block;
+  text-decoration: line-through;
+  color:#666;
+  margin-left:20rpx;
+  font-size:30rpx;
+ 
+}
+.cart_bottom{
+  float: right;
+  margin:20rpx 30rpx 0 0;
+}
+.cart_bottom text{
+  font-size:25rpx;
+  color:#CC0000;
+  border:1px solid #CC0000;
+  border-radius: 8rpx;
+
+}
+.cart_bottom>view:nth-child(2){
+  padding:20rpx 0 30rpx 0 ;
+}
+button{
+  clear: both;
+  background:#0075C1;
+  width:60%;
+  margin: 0 auto;
+  margin-bottom:20rpx;
+}
+
+.bottom_order{
+ position: fixed;
+	bottom: 0rpx;
+  right: 0rpx;
+	 width:100%; 
+  background:#fff;
+  border-top:1px solid #f2f2f2; 
+ 
+  height:80rpx;
+ }
+ .bottom_icon{
+   display: inline-block;
+   margin-left:20rpx;
+   margin-top:0rpx;
+    
+   
+ }
+ .bottom_icon>icon{
+    position:relative;top:8rpx;
+ }
+ .bottom_icon>text{
+   color:#555;
+   margin:0 30rpx 0 10rpx;
+   
+ }
+ .bottom_order>text{
+  display: inline-block;
+  font-size:35rpx;
+  margin-left:10rpx;  
+  line-height: 80rpx;  
+ }
+ .bottom_order>text:nth-child(2){
+    color:#0075C1;
+ }
+ .bottom_order button{
+   display: inline-block;
+   background:#0075C1;
+   border-radius: 0;
+   width:30%;
+   height:100%;
+   color:#fff;
+   float: right;
+   
+ }
+ 

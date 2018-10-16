@@ -1,0 +1,22 @@
+<!--pages/index/search/search.wxml-->
+<view class='container_index'>
+  <view class='clearfix'>
+    <view class='search'>
+      <icon type="search" color="#4c4c4c" size="21"></icon>
+      <input type="text" maxlength="100" placeholder="请输入型号、品牌" placeholder-style="color:#999999" bindinput="searchContent" value="{{search_content}}"/>
+      <text class='cancel' bindtap="cancel">取消</text>
+    </view>
+  <button class='btn_search' bindtap="search">搜索</button>
+  </view>
+  <view class='hot_search'>
+    <text class='right' bindtap="toggleHotSearch">换一换</text>
+    <text class='left'>热门搜索</text>
+    <view>
+      <block wx:for="{{hot_search}}" wx:key="item">
+        <text bindtap="selectSearch" data-val="{{item}}">{{item}}</text>
+      </block>
+    </view>
+  </view>
+</view>
+
+

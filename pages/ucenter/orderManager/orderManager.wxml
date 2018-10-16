@@ -1,0 +1,118 @@
+<!--pages/ucenter/evaluate/evaluate.wxml-->
+
+<view class="order_nav_list">
+  <block wx:for="{{orderNav}}" wx:key="this">
+    <view class="{{curNav==index ? 'cur' : ''}}" bindtap="OrderTypeChange" data-index="{{index}}" data-type="{{item.type}}">{{item.name}}</view>
+  </block>
+</view>
+
+<!-- 订单头部 -->
+<scroll-view scroll-y="true" bindscrolltolower="pullUpLoad">
+  <block wx:for="{{orderList}}" wx:key="orderListItem">
+    <view class="order_list">
+      <view class="order_title">
+        <view>订单号：{{item.number}}</view>
+        <view class="order_trans_suc" wx:if="{{status==0}}">{{item.orderCom}}</view>
+        <view class="order_trans_suc" wx:if="{{status==4}}">等待商家付款</view>
+        <view class="order_trans_suc" wx:if="{{status==3}}">等待买家付款</view>
+        <view class="order_trans_suc" wx:if="{{status==5}}">交易成功</view>
+      </view>
+      <view class="order_content">
+        <block wx:for="{{item.orderContentList}}" wx:for-item="clistitem" wx:key="orderContentListItem">
+          <view class="order_content_list">
+            <view>
+              <view class="order_general_require">
+                <view class="order_general_list">
+                  <view>品牌<text>{{clistitem.brand}}</text></view>
+                  <view>型号<text>{{clistitem.model}}</text></view>
+                </view>
+                <view class="order_general_list">
+                  <view>规格<text>{{clistitem.scale}}</text></view>
+                  <view>电压<text>{{clistitem.voltage}}</text></view>
+                </view>
+              </view>
+              <view class="order_detail_require">
+                <block wx:for="{{item.orderDetailList}}" wx:for-item="dlistitem" wx:key="orderDetailListItem">
+                  <view class="order_detail_list">
+                    <view>{{dlistitem.long}}<text>米</text></view>
+                    <view>{{dlistitem.price}}<text>元</text></view>
+                    <view>{{dlistitem.nums}}<text>根</text></view>
+                    <!-- 订单确认里面的数量加减
+                    <view class="order_nums_change">
+                      <icon class="iconfont icon-plus"></icon>
+                      <input type="" name="nums"/>
+                      <icon class="iconfont icon-minus"></icon>
+                    </view> -->
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+        </block>
+        <view class="order_total">合计：{{item.total}}元</view>
+        <view class="order_options" wx:if="{{status!=4}}">
+          <view class="delete_order" bindtap="deleteOrder" data-index="{{index}}">删除订单</view>
+          <view class="pay_order" wx:if="{{status==3}}" bindtap="orderPay">付款</view>
+          <view class="evaluate_order" wx:if="{{status==5}}" bindtap="orderEval">评价</view>
+        </view>
+
+      </view>
+    </view>
+    <!-- <view class="order_tit">
+      <view class="order_tit_l">
+        <image src="../../images/person.png" style="width:18px;height:18px;" />
+        <view class="uname" bindtap='makePhone' data-phone="{{item.telephone}}">{{item.fullname}}-{{item.telephone}}</view>
+      </view>
+      <view class="order_tit_r">{{item.order_state_n}}</view>
+    </view>
+    订单内容
+     <navigator url="../orderinfo/orderinfo?p_id={{item.order_product_id}}" open-type='navigate'>
+      <view class='order_container'>
+        <image src="http://www.douf.com.cn/image/{{item.pro_image}}" />
+        <view class="order_name">
+          <text>{{item.name}}</text>
+          <text>{{item.p_desc}}</text>
+          <block wx:if="{{item.option_value_name}}">
+            <text>类型：{{item.option_value_name}}</text>
+          </block>
+        </view>
+        <view class="price">
+          <text>￥{{item.price}}</text>
+          <text>✖ {{item.quantity}}</text>
+        </view>
+      </view>
+    </navigator>
+    订单统计
+    <view class="order_total">
+      <view>共{{item.quantity}}件商品 合计：￥{{item.total}}</view>
+    </view>
+    订单操作
+    <view class="order_do">
+      <navigator url="../orderinfo/orderinfo?p_id={{item.order_product_id}}" open-type='navigate'>
+        <view>详 情</view>
+      </navigator>
+    </view> -->
+  </block>
+
+  <!-- 分页加载 -->
+  <view class='loading' wx:if="{{isLoad}}">
+    <icon class="iconfont icon-loading"></icon><text>正在加载...</text>
+  </view>
+  <view class="nores" wx:if="{{isOver && page>2}}">
+    <text>没有更多了</text>
+  </view>
+
+</scroll-view>
+<!-- 加载中 -->
+<!-- <view>
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view> -->
+
+<!-- <view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view> -->
+
+<view class="no_order" wx:if="{{noData}}">
+  <icon class="iconfont icon-no-order"></icon>
+  <view>您还没有相关订单</view>
+</view>

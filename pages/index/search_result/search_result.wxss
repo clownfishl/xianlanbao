@@ -1,0 +1,315 @@
+/* pages/index/search_result/search_result.wxss */
+.icon-shaixuan:before{ content: "\e68d";font-size: 34rpx; color:#999; vertical-align: middle; }
+.icon-up1:before{ content: "\e611";font-size: 28rpx; color:#999; }
+.icon-down:before{ content: "\e612";font-size: 28rpx; color:#999; }
+.icon-guanbi1:before{ content: "\e619";font-size: 36rpx; color:#999; }
+.icon-jiajian1:before{ content: "\e64a";font-size: 40rpx; color:#999; }
+.icon-jiajian:before{ content: "\e64b";font-size: 40rpx; color:#999; }
+
+page{
+  width:100%;
+  height:100%;
+}
+.contain {
+  position:relative;
+  height: 100%;
+  width:100%;
+  margin: 0 auto;
+  font-size:30rpx;
+  overflow:hidden;
+  box-sizing: border-box;
+}
+
+/*头部分类*/
+.title{
+  display:flex;
+  height:80rpx;
+  width:100%;
+  padding-left:2.5%;
+  padding-right:2.5%;
+  background:#eff3f6;
+  box-sizing:border-box;
+  justify-content:space-between;
+}
+.title .title_l{
+  display:flex;
+  height:80rpx;
+  width:72%;
+  justify-content:space-between;
+}
+.title .title_l view{
+  height:80rpx;
+  width:111rpx;
+  text-align:center;
+  line-height:80rpx;
+}
+.title .title_r{
+  height:80rpx;
+  padding-left:30rpx;
+  line-height:80rpx;
+}
+
+
+/*分类弹出列表*/
+.list{
+  position:absolute;
+  height:331rpx;
+  width:100%;
+  padding:0 20rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index:10;
+  overflow-y: scroll;
+  border:1rpx solid #ddd;
+  border-bottom-left-radius: 8rpx;
+  border-bottom-right-radius: 8rpx;
+}
+.list view{
+  height: 80rpx;
+  line-height:80rpx;
+  padding-left:10rpx;
+  border-bottom:1rpx solid #e1e1e1;
+}
+.list view.listmore{
+  border:none;
+  color:#0075c1;
+}
+
+
+
+/* 筛选列表 */
+.filter{
+  position:absolute;
+  width:100%;
+  height:calc(100% - 80rpx);
+  background:#fff;
+  transition:left .3s;
+  padding:20rpx;
+  box-sizing: border-box;
+  overflow-y:scroll;
+  z-index:10;
+}
+.filter_g{
+  margin-bottom:15rpx;
+}
+.filter_search{
+  position:relative;
+  display:inline-block;
+}
+.filter_search input{
+  position:absolute;
+  display:inline-block;
+  vertical-align:middle;
+  padding-left:10rpx;
+  width:316rpx;
+  height:58rpx;
+  line-height:58rpx;
+  left:30rpx;
+  border:1px solid #eee;
+  border-radius:10rpx;
+  top:-33rpx;
+}
+/* input搜索完成弹出框 */
+.filter_search_content{
+  position:absolute;
+  width:329rpx;
+  height:190rpx;
+  padding:0 20rpx;
+  margin-left:30rpx;
+  border:1px solid #eee;
+  border-radius:8rpx;
+  background:#fff;
+  box-sizing:border-box;
+  top:25rpx;
+  z-index:10;
+  border-bottom-left-radius: 12rpx;
+  border-bottom-right-radius: 12rpx;
+  overflow-y:scroll;
+}
+.filter_search_content view{
+  height:60rpx;
+  line-height:60rpx;
+  border-bottom:1px solid #eee;
+}
+.filter_brand_title,.filter_model_title,.filter_spec_title,.filter_vm_title,.filter_long_title,.section__title{
+  position:relative;
+  height:80rpx;
+  line-height:80rpx;
+  padding-left:20rpx;
+  margin-bottom:12rpx;
+  font-size:30rpx;
+}
+.filter .filter_g>view:nth-child(2) text{
+  display:inline-block;
+  line-height:80rpx;
+  background:#eff3f6;
+  text-align:center;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  margin:10rpx 10rpx;
+  border-radius:15rpx;
+}
+.filter_brand,.filter_model,.filter_spec,.filter_vm{
+  height:auto;
+}
+.filter_long_content{
+  width:100%;
+  position:relative;
+  padding-left:17rpx;
+  box-sizing: border-box;
+}
+.filter_long_content input{
+  display:inline-block;
+  width:240rpx;
+  line-height:40rpx;
+  text-align:center;
+  border:1rpx solid #eee;
+  border-radius:40rpx;
+  vertical-align:middle;
+  box-sizing: border-box;
+}
+.filter_long_content icon{
+  display:inline-block;
+  vertical-align:middle;
+  padding-bottom:11rpx;
+}
+.icon-jiajian1{
+  margin-left:20rpx;
+}
+.icon-jiajian{
+  margin-right:20rpx;
+}
+.normal{
+  color:black;
+}
+.disabled{
+ color:#ccc;
+}
+
+
+/* 筛选里面的品牌占位 */
+.slot{
+  position:relative;
+  display:inline-block;
+  line-height:58rpx;
+  height:58rpx;
+  background:#eff3f6;
+  text-align:center;
+  padding:0 20rpx;
+  box-sizing:border-box;
+  border-radius:15rpx;
+  margin-left:30rpx;
+  vertical-align: middle;
+  top:0;
+}
+.slotcontent{
+  display:inline-block;
+  line-height:47rpx;
+  height:58rpx;
+}
+.slot icon{
+  vertical-align:middle;
+}
+
+/*filter_btn*/
+.filter_btn{
+  position:relative;
+  display:flex;
+  width:100%;
+  margin-top:20rpx;
+  padding:20rpx 40rpx;
+  background:#fff;
+  justify-content: space-around;
+  box-sizing:border-box;
+  bottom: 0;
+  z-index:11;
+}
+.filter_btn view{
+  height:60rpx;
+  width:220rpx;
+  border:1px solid #ddd;
+  text-align:center;
+  line-height:60rpx;
+  border-radius:30rpx;
+}
+
+.section .picker{
+  height:80rpx;
+  line-height: 65rpx;
+  padding-left:20rpx;
+  font-size:31rpx;
+}
+
+
+/* 公共现货列表样式 */
+.public view.first{
+  position:relative;
+  padding:15rpx 0;
+  width:100%;
+ }
+ .public view.first>view{
+  line-height:65rpx;
+ }
+.public view view.first .name{
+  display:inline-block;
+  width:332rpx;
+  padding:0 0 0 30rpx;
+  font-size:32rpx;
+  color:black;
+  font-weight:bold;
+  letter-spacing: 5rpx;
+}
+.public view view.first .category{
+  font-size:32rpx;
+  color:black;
+  font-weight:bold;
+  letter-spacing: 2rpx;
+}
+.public view view.first .spec{
+  display:inline-block;
+  width:332rpx;
+  color:black;
+  letter-spacing: 2rpx;
+  }
+.public view view.first .starl{
+   display:inline-block;
+}
+.public view view.first>view:nth-child(3) {
+  position:relative;
+}
+.public view view.first>view:nth-child(3) .seller{
+  position:absolute;
+  right:180rpx;
+  color:#0079c2;
+}
+/*现货列表*/
+.goodlist{
+  width:100%;
+  padding-left:2.5%;
+  padding-right:2.5%;
+  border-bottom:1rpx solid #eee;
+  background:#fff;
+  box-sizing: border-box;
+}
+.public view view.first .name{
+  padding-left:0;
+}
+.goodlist .first>view:last-child{
+  position:relative;
+}
+.goodlist .first>view:last-child text:first-child{
+  padding-right:80rpx!important;
+}
+.select{
+  position:absolute;
+  width:120rpx;
+  color:#fff;
+  text-align: center;
+  background:#0075c2;
+  letter-spacing: 10rpx;
+  line-height:52rpx;
+  border-radius:8rpx;
+  font-size:28rpx;
+  right:10rpx;
+  bottom:9rpx;
+}

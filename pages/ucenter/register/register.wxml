@@ -1,0 +1,49 @@
+<!--pages/register/register.wxml-->
+<import src="../../component/appToast/appToast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+
+<view id="contain">
+  <view class="pic">
+     <view><image style="width:180rpx;height:180rpx;" src="../../../static/images/bz.png"></image></view>
+     <view>线缆宝</view>
+  </view>
+  <view class="center">
+
+      <form bindsubmit="formSubmit" bindreset="formReset">
+
+        <view class="formText">
+          <icon class="iconfont icon-shouji"></icon>
+          <input id="phone" name="phone" type="number" placeholder="请输入手机号" placeholder-class="placeh" bindblur="getPhone"/>
+        </view>
+        <view class="line"></view>
+
+        <view class="formText">
+          <icon class="iconfont icon-yanzhengma"></icon>
+          <input id="msgcode" name="msgcode" class="msgcode" type="number"  placeholder="请输入验证码"/>
+          <view class="code" bindtap="sendMsgCode" wx:if="{{!is_code}}">获取验证码</view>
+          <view class="coded" wx:else>{{nums}}s</view>
+        </view>
+        <view class="line"></view>
+
+        <view class="formText">
+          <icon class="iconfont icon-mima"></icon>
+          <input id="psd" name="psd" placeholder="请设置6-12位数字字母组合" placeholder-class="placeh" bindblur="getPsd"/>
+        </view>
+        <view class="line"></view>
+
+        <view class="formText">
+          <icon class="iconfont icon-mima1"></icon>
+          <input id="spsd" name="spsd" placeholder="请确认密码" placeholder-class="placeh" bindblur="getSpsd"/>
+        </view>
+        <!-- 按钮 -->
+        <view class="registBtnView">
+          <button form-type="submit" class="registBtn" type="primary">注册</button>
+        </view>
+      </form>
+      <view class="regist">
+        <view bindtap="rlogin">已有账号，立即登录</view>
+      </view>
+
+  </view>
+
+</view>

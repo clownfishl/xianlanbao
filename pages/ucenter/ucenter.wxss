@@ -1,0 +1,127 @@
+/**index.wxss**/
+.icon-gerenziliao:before{content:'\e608';font-size:30rpx;margin-right:10rpx;}
+.icon-arrowright:before{content:'\e62e';font-size:60rpx;color:#ddd;vertical-align: middle;}
+.icon-zaixianzixun:before{content:'\e675';font-size:58rpx;color:#fff;}
+.icon-order:before{content:'\e6de';font-size:70rpx;}
+.icon-pay:before{content:'\e898';font-size:70rpx;}
+.icon-delivery:before{content:'\e882';font-size:70rpx;}
+.icon-evaluate:before{content:'\e8bc';font-size:70rpx;}
+page{
+  height:100%;
+  width:100%;
+}
+.container{
+  height:100%;
+  width:100%;
+  background:#f8f8f8;
+}
+/*未登录时*/
+.no_login{
+  display:flex;
+  font-size: 32rpx;
+  align-items: center;
+}
+.no_login text{
+  padding:0 10rpx;
+}
+.ucenter image{
+  width:150rpx;
+  height:150rpx;
+  margin: 0 30rpx;
+  border-radius:50%;
+}
+.top{
+  position:relative;
+  height:471rpx;
+  width:100%;
+  background: radial-gradient(#f8f8f8,#aad1ea,#0075c1);
+  border-bottom:1rpx solid #eaeaea;
+}
+.ucenter{
+  position:absolute;
+  display: flex;
+  height:200rpx;
+  width:100%;
+  box-sizing: border-box;
+  top:51rpx;
+}
+.ucenter view{
+  margin:30rpx 0rpx 20rpx 0;
+}
+.ucenter .avatar{
+  overflow:hidden;
+}
+.ucenter .prof{
+  position: absolute;
+  right:36rpx;
+  top:-26rpx;
+  font-size:30rpx;
+  color:#fff;
+}
+
+/* 设置一列四个图 */
+.u_details{
+  position:absolute;
+  display:flex;
+  width: 100%;
+  height:156rpx;
+  background: #fff;
+  text-align: center;
+  font-size:27rpx;
+  bottom:0;
+  box-sizing:border-box;
+  align-items: center;
+}
+.u_details view{
+  width:25%;
+  height:100%;
+  padding-top:19rpx;
+  text-align: center;
+  color:#0075c1;
+  box-sizing: border-box;
+}
+
+.u_details text{
+  display:block;
+  text-align:center;
+  color:#666;
+}
+.u_details icon{
+  margin-bottom:5rpx;
+}
+.center{
+  margin-top:20rpx;
+  background:#fff;
+}
+.center view{
+  display:flex;
+  height:120rpx;
+  width:100%;
+  padding:0 20rpx;
+  border-bottom:1rpx solid #eee;
+  line-height:120rpx;
+  justify-content: space-between;
+  box-sizing: border-box;
+  letter-spacing:3rpx
+}
+
+
+
+.chat{
+  position:absolute;
+  height:120rpx;
+  width: 120rpx;
+  border-radius:50%;
+  text-align:center;
+  background:#0075c1;
+  font-size:32rpx;
+  bottom:20rpx;
+  right:20rpx;
+  overflow: hidden;
+}
+.chat view{
+  width:100%;
+  text-align:center;
+  font-size:28rpx;
+  color:#fff;
+}

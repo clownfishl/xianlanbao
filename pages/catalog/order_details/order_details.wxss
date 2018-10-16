@@ -1,0 +1,69 @@
+/* pages/catalog/order_details//order_details.wxss */
+page{
+  margin-bottom:80rpx;
+}
+.order_details{
+  display: block; 
+  padding:30rpx 30rpx;
+   }
+.order_details>view{
+   padding-bottom:30rpx; 
+}
+image{
+  width:40rpx;
+  height:40rpx;
+  margin-top:10rpx;
+  
+}
+.order_de_top{
+  display: flex;
+  flex-flow: row nowrap; 
+  
+}
+.order_de_top .or_left{
+  margin:0 50rpx;
+  width:80%;
+  padding-bottom:0;
+ /* flex-wrap: wrap; */
+ 
+}
+.or_bottom{
+   display: block; 
+  padding: 20rpx 30rpx 30rpx 0 ;
+}
+.border_same{
+   border:1px solid #0075C1;
+   border-radius: 30rpx;
+}
+view.logistics{
+  width:250rpx;  
+  padding:10rpx ;
+  text-align: center;
+  margin-left:50rpx;
+  margin:0 auto; 
+}
+.logistics image{
+  margin:0rpx 10rpx -5rpx 0;
+}
+view.cus_service{
+  width:200rpx;
+ }
+
+view.bottom_order{
+ position: fixed;
+	bottom: 0rpx;
+  width:100%; 
+  background:#fff;
+  border-top:1px solid #f2f2f2;  
+ }
+.bottom_order{
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom_order text{
+ 
+  padding:5rpx 10rpx;
+  margin:20rpx 30rpx;
+  color:#0075C1;
+}

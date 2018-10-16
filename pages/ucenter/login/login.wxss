@@ -1,0 +1,158 @@
+/* pages/login/login.wxss */
+.icon-shouji:before{content:'\e607';font-size: 52rpx; color:#999;}
+.icon-mima:before{content:'\e631';font-size: 60rpx;color:#999;}
+.icon-yanzhengma:before{content:'\e632';font-size: 50rpx;color:#999;}
+.icon-kejian:before{content:'\e61b';font-size: 60rpx;color:#999;}
+.icon-bukejian:before{content:'\e61c';font-size: 60rpx;color:#999;}
+
+page{
+  height:100%;
+  width:100%;
+}
+#contain{
+  position:relative;
+  height:100%;
+  width:100%;
+  background:#549CDA;
+}
+#contain .pic{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  position:absolute;
+  height:260rpx;
+  width:260rpx;
+  top:90rpx;
+  left:50%;
+  margin-left:-130rpx;
+}
+#contain .pic view:first-child{
+  height:180rpx;
+  width:180rpx;
+  border-radius:50%;
+  overflow:hidden;
+}
+.center{
+  position:absolute;
+  height:340rpx;
+  width:680rpx;
+  border:1px solid #eee;
+  border-radius:30rpx;
+  background:#fff;
+  top:358rpx;
+  left:50%;
+  margin-left:-340rpx;
+}
+.center .center_title{
+  height:100rpx;
+  border-bottom:1rpx solid #eee;
+}
+.center .center_title view{
+  float:left;
+  width:50%;
+  height:100rpx;
+  line-height:100rpx;
+  text-align:center;
+  font-size:36rpx;
+}
+.center .center_title view:first-child{
+  border-right:1rpx solid #eee;
+  box-sizing:border-box;
+}
+.center .center_content{
+  height:240rpx;
+  width:100%;
+}
+.formText{
+  position:relative;
+  height:120rpx;
+  line-height:120rpx;
+  width:100%;
+  vertical-align: middle;
+}
+.formText icon{
+  height:70rpx;
+  width:60rpx;
+  padding:0 20rpx 0 20rpx;
+}
+.formText .pos{
+  position:absolute;
+  right:36rpx;
+  top:10rpx;
+}
+.formText input{
+  position:absolute;
+  display:inline-block;
+  top:36rpx;
+}
+.line{
+  width:93%;
+  height:1rpx;
+  margin:0 auto;
+  background:#eee;
+  box-sizing:border-box;
+}
+.inputcode{
+  width:260rpx;
+}
+.code{
+  position:absolute;
+  height:82rpx;
+  width:206rpx;
+  line-height:82rpx;
+  text-align:center;
+  font-size:33rpx;
+  right:52rpx;
+  top:20rpx;
+  z-index:10;
+  border:1rpx solid #eee;
+  border-radius:20rpx;
+  background:none;
+}
+.code::after{
+  border:none;
+}
+.coded{
+  position:absolute;
+  height:82rpx;
+  width:206rpx;
+  line-height:82rpx;
+  text-align:center;
+  font-size:33rpx;
+  right:52rpx;
+  top:20rpx;
+  z-index:10;
+  border:1rpx solid #eee;
+  border-radius:20rpx;
+  background:none;
+}
+.coded::after{
+  border:none;
+}
+
+/*按钮*/
+.loginBtnView {
+ width: 100%;
+ height: auto;
+ margin-top: 0px;
+ margin-bottom: 0px;
+ padding-bottom: 0px;
+}
+
+.loginBtn {
+ width: 85%;
+ height:90rpx;
+ line-height:90rpx;
+ margin-top: 25px;
+}
+
+.regist{
+  display:flex;
+  height:60rpx;
+  width:100%;
+  line-height:60rpx;
+  justify-content: space-between;
+}
+.regist view{
+  font-size:30rpx;
+}

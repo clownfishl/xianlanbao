@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/ucenter/ucenter",
+    "pages/ucenter/orderManager/orderManager",
+    "pages/ucenter/address/address",
+    "pages/index/index",
+    "pages/index/gooddetail/gooddetail",
+    "pages/ucenter/mineMsg/mineMsg",
+    
+    "pages/ucenter/address/addressEdit/addressEdit",
+    "pages/ucenter/address/addressAdd/addressAdd",
+    "pages/ucenter/userMsg/reviseMsg/reviseMsg",
+    "pages/ucenter/userMsg/userMsg",
+    "pages/ucenter/complain/complain",
+    "pages/ucenter/register/register",
+    "pages/ucenter/login/login",
+    "pages/catalog/con_order/con_order",
+    "pages/catalog/details/details",
+    
+    "pages/catalog/catalog",
+    "pages/index/moreinfo/moreinfo",
+    "pages/index/search/search",
+    "pages/catalog/order_details/order_details",
+    "pages/catalog/pay/pay",
+    "pages/cart/cart",
+    "pages/customerser/customerser",
+    "pages/logs/logs",
+    "pages/index/search_result/search_result"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#0075c1",
+    "navigationBarBackgroundColor": "#0075c1",
+    "navigationBarTitleText": "线缆宝",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#b4282d",
+    "color": "#666",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "static/images/ic_menu_choice_nor.png",
+      "selectedIconPath": "static/images/ic_menu_choice_pressed.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/catalog/catalog",
+      "iconPath": "static/images/ic_menu_sort_nor.png",
+      "selectedIconPath": "static/images/ic_menu_sort_pressed.png",
+      "text": "分类"
+    }, {
+      "pagePath": "pages/cart/cart",
+      "iconPath": "static/images/ic_menu_shoping_nor.png",
+      "selectedIconPath": "static/images/ic_menu_shoping_pressed.png",
+      "text": "购物车"
+    }, {
+      "pagePath": "pages/ucenter/ucenter",
+      "iconPath": "static/images/ic_menu_me_nor.png",
+      "selectedIconPath": "static/images/ic_menu_me_pressed.png",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "dgggwnloadFile": 10000
+  }
+}

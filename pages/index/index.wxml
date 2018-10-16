@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<!-- 首页 -->
+<view class="container_index public">
+
+  <!-- search -->
+  <view class='search' bindtap='search_index'>
+    <icon type="search" color="#4c4c4c" size="18"></icon>
+    <text style="margin-left:8rpx;">请输入关键词搜索</text>
+  </view>
+
+  <!-- banner -->
+  <view class="banner">
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}"  duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="unique">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 消息 -->
+  <view class="msg">
+    <swiper class="swiper_container" vertical="true" autoplay="false" circular="true" interval="2000">
+      <block wx:for="{{inforList}}" wx:key="unique">
+        <navigator url="{{item.url}}" open-type="navigate">
+          <swiper-item>
+            <view class="swiper_item"><text><text class='font_Big'>{{item.titlebig}} </text> |  {{item.title}}</text></view>
+          </swiper-item>
+        </navigator>
+      </block>
+    </swiper>
+  </view>
+
+  <!--电缆现货  -->
+  <view class='line_more line_more_bot'>
+    <view class='line'>电缆现货 <text class='more' bindtap="more">更多 ></text></view>
+  </view>
+  <!-- 现货列表 -->
+  <block wx:for="{{goodList}}" wx:key="item">
+    <view class="total_msg goodlist" >
+      <view class='first' bindtap='details'>
+        <view>
+          <text class='name text'>{{item.brand}}</text>
+          <text class='category text'>{{item.model}}</text>
+        </view>
+        <view>
+          <text class='spec text'>{{item.spec}}</text>
+          <text class='seller text'>{{item.vm}}</text>
+        </view>
+        <view>
+          <view class="starl">
+            <image wx:for="{{item.total_img}}" wx:for-item="imgitem" wx:key="unique" src="{{imgitem.src}}"></image>
+          </view>
+          <text class='seller text'>总量{{item.sum}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- <view class='total_msg' wx:for="{{total}}" wx:key="item">
+    <view class='first' bindtap='details'>
+      <view>
+        <text class='name text'>{{item.brand}}</text>
+        <text class='category text'>{{item.model}}</text>
+        <text class='spec text'>{{item.spec}}</text>
+        <view class="starl">
+         <image wx:for="{{total_img}}" wx:key="unique" src="{{item.src}}"></image>
+        </view>
+      </view>
+      <view>
+        <text class='seller text'>电压：
+        {{item.vm}}</text>
+        <text class='seller text'>总量：{{item.sum}}</text>
+      </view>
+    </view>
+  </view> -->
+
+</view>

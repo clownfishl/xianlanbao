@@ -1,0 +1,56 @@
+<!--pages/catalog/order_details//order_details.wxml-->
+<!--pages/catalog/cart/con_order/con_order.wxml-->
+
+<view class='container'>  
+  <view class='order_details bg order_de_top'>             
+    <image src='../../../static/images/u_details.png' class='default'></image>
+    <view class='or_left'>
+      <view>
+        <text style='padding-right:50rpx'>王铁柱 </text>
+        <text>12354525625</text>
+      </view>           
+      <view class='or_bottom'>地址：<text>江苏省南京市苏州路13号</text> </view>
+      <view class='logistics border_same'>
+         <image src='../../../static/images/u_details.png' ></image>
+         <text>查看物流信息</text>
+      </view>
+    </view>    
+  </view>
+
+    <view class='order_details bg'>
+     <view>订单名称<text>123456788</text></view>
+      <view>远东电缆：<text>yjv</text></view>
+      <view>电压：<text>0.6/1kv </text> 
+        <text style='padding-left:50rpx'>规格：</text><text>3*50</text>
+      </view>
+      
+      <view>数量：<text>50</text></view>
+      <view>￥<text>12000.00</text></view>  
+      <view class='logistics cus_service border_same'>
+         <image src='../../../static/images/u_details.png' ></image>
+         <text>联系客服</text>
+      </view>              
+    </view>
+
+
+  <view class='order_details bg'>
+    <view> 发票类型：<text>普通发票</text></view>
+    <view> 发票抬头：<text>个人</text></view>
+    <view style='padding-bottom:0'> 发票内容：<text>商品明细</text></view>
+  </view>
+   <view class='order_details bg'>
+    <view> 订单编号：<text>00123456789</text></view>
+    <view> 下单时间：<text>2018-6-20 15:31:00</text></view>
+     <view> 付款信息：<text>招商银行信用卡（1234）</text></view>
+    <view style='padding-bottom:0'> 付款时间：<text>2018-6-20 16:27:00</text></view>
+   </view>
+  
+</view>
+ <view class='bottom_order '>
+     <text class='border_same'>再次购买</text>
+     <text class='border_same'>评价晒单</text>
+     
+  </view>
+
+
+

@@ -1,0 +1,48 @@
+<!--pages/index/gooddetail/gooddetail.wxml-->
+<view class="contain">
+  <!-- 线缆详情 -->
+  <block wx:for="{{detailList}}" wx:key="item">
+    <view class="detail-list" bindtap="toDetail">
+      <view class='first' bindtap='details'>
+        <view>
+          <text class='name'>{{item.brand}}</text>
+          <text class='category'>{{item.model}}</text>
+        </view>
+        <view class="deep_detail">
+          <view>
+            <text class=''>规格:<text>{{item.scale}}</text></text>
+            <text class='vm'>电压:<text>{{item.voltage}}v</text></text>
+          </view>
+          <view>
+            <view class='star'>星级:
+              <icon class="iconfont icon-star"></icon>
+              <icon class="iconfont icon-star"></icon>
+              <icon class="iconfont icon-star"></icon>
+              <icon class="iconfont icon-star"></icon>
+              <icon class="iconfont icon-star"></icon>
+            </view>
+            <text class='price'>单价:<text>{{item.price}}元</text></text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="center">
+      <view class="long_title">
+        <view>长度</view>
+        <view>数量</view>
+        <view>单价</view>
+        <view></view>
+      </view>
+      <view class="long_content">
+        <block wx:for="{{item.longList}}" wx:key="longListItem" wx:for-item="longitem" data-index="{{index}}" data-id="{{longitem.type}}">
+          <view class="long_list">
+            <view>{{longitem.long}}</view>
+            <view>{{longitem.num}}</view>
+            <view>{{longitem.sprice}}</view>
+            <view><view class="select-pick" bindtap="toGoodDetail">选购</view></view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

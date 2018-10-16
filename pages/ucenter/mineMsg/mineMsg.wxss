@@ -1,0 +1,75 @@
+/* pages/ucenter/mineMsg/mineMsg.wxss */
+.icon-dian:before{content:'\e698';}
+.icon-sort_desc:before{content:'\e600';}
+.icon-sanjiaojiantoutriangular-copy:before{content:'\e685';}
+
+page{
+  height:100%;
+  width:100%;
+  background-color: #f8f8fa;
+}
+.contain{
+  height:100%;
+  width:100%;
+}
+.top{
+  height:100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #ddd;
+  background: #fff;
+}
+.top view{
+  float:left;
+  width:calc(100% / 3);
+  height:100rpx;
+  line-height: 100rpx;
+  font-size: 35rpx;
+  text-align: center;
+  border-bottom:2rpx solid transparent;
+}
+.act{
+ color:#0075c1;
+ border-color:#0075c1!important;
+}
+
+/*信息内容*/
+.center{
+  width:100%;
+  padding: 0 20rpx;
+  background-color:#fff;
+  box-sizing: border-box;
+}
+.center view{
+  display:flex;
+  line-height: 120rpx;
+  border-bottom:1rpx solid #ddd;
+  box-sizing: border-box;
+}
+.center view icon{
+  flex:.8;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 46rpx;
+}
+.center view icon:nth-child(1){
+  color:#0075c1;
+}
+.center view text{
+  flex:8.4;
+  padding-left:10rpx;
+  box-sizing:border-box;
+  color:#0075c1;
+  font-size:34rpx;
+}
+.read{
+  color:#999!important;
+}
+.elli{
+ overflow:hidden;
+ white-space:nowrap;
+ text-overflow:ellipsis;
+}
+.unelli{
+  line-height:54rpx;
+  margin:35rpx 0 20rpx;
+}

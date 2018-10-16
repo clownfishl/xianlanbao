@@ -1,0 +1,47 @@
+<!--pages/login/login.wxml-->
+<import src="../../component/appToast/appToast.wxml"/>
+<template is="toast" data="{{ ..._toast_ }}"/>
+
+<view id="contain">
+  <view class="pic">
+     <view><image style="width:180rpx;height:180rpx;" src="../../../static/images/bz.png"></image></view>
+     <view>线缆宝</view>
+  </view>
+  <view class="center">
+
+    <view class="center_title">
+      <view class="psd" bindtap="psd_show">密码验证</view>
+      <view class="msg" bindtap="msg_show">短信验证</view>
+    </view>
+    <view class="center_content">
+        <form bindsubmit="formSubmit" bindreset="formReset">
+          <view class="formText">
+            <icon class="iconfont icon-shouji"></icon>
+            <input id="phone" name="phone" type="number" placeholder="请输入手机号" placeholder-class="placeh" bindblur="getPhone"/>
+          </view>
+          <view class="line"></view>
+          <view class="formText" wx:if="{{ispsd}}">
+            <icon class="iconfont icon-mima"></icon>
+            <input id="psd" name="psd" placeholder="请输入密码" placeholder-class="placeh" password="{{password}}" bindblur="getPsd"/>
+            <icon class="iconfont {{password?'icon-kejian':'icon-bukejian'}} pos" bindtap="toggleSee"></icon>
+          </view>
+          <view class="formText"  wx:if="{{ismsg}}">
+            <icon class="iconfont icon-yanzhengma"></icon>
+            <input id="yzcode" name="yzcode" class="inputcode" type="number" placeholder="请输入验证码" />
+            <button class="code" bindtap="sendCode" wx:if="{{!is_code}}">获取验证码</button>
+            <button class="coded" wx:else>{{nums}}</button>
+          </view>
+          <!-- 按钮 -->
+          <view class="loginBtnView">
+            <button form-type="submit" class="loginBtn" type="primary">登录</button>
+          </view>
+        </form>
+        <view class="regist">
+          <view bindtap="forgetPsd">忘记密码</view>
+          <view bindtap="register">没有账号，立即注册</view>
+        </view>
+    </view>
+
+  </view>
+
+</view>

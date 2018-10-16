@@ -1,0 +1,231 @@
+/* pages/catalog/catalog.wxss */
+.icon-guanbi1:before{ content: "\e619";font-size: 36rpx; color:#999; }
+.icon-jiajian1:before{ content: "\e64a";font-size: 40rpx; color:#999; }
+.icon-jiajian:before{ content: "\e64b";font-size: 40rpx; color:#999; }
+
+page{
+  height:100%;
+  width:100%;
+  background:#fff;
+}
+.contain{
+  height:100%;
+  width:100%;
+}
+
+/*分类框架*/
+.classify{
+  display:flex;
+  flex-direction: column;
+  height:100%;
+  width:100%;
+}
+
+/*分类顶部*/
+.classify-top{
+  display:flex;
+  flex-direction: row;
+  height:calc(100% - 100rpx);
+  width:100%;
+}
+
+/*顶部左侧*/
+.classify-left{
+  width:206rpx;
+}
+.classify-left view{
+  height:90rpx;
+  text-align:center;
+  font-size:33rpx;
+  line-height:90rpx;
+  border-left:10rpx solid #fff;
+  border-right:10rpx solid #fff;
+  box-sizing: border-box;
+}
+.classify-left .use{
+  width:100%;
+  border-left:15rpx solid #0075c1;
+  border-right:15rpx solid #EFF3F6;
+  background:#EFF3F6;
+  box-sizing:border-box;
+}
+.classify-left view:first-child{
+  height:88rpx;
+  line-height:88rpx;
+}
+.classify-left view text{
+  display:inline-block;
+  height:90rpx;
+  width:172rpx;
+  line-height:90rpx;
+  border-bottom:6rpx solid #2b8bc8;
+}
+.classify-left view:first-child text{
+  border-bottom:none;
+  height:80rpx;
+  line-height:80rpx;
+}
+.active{
+  border-left-color:#0072be;
+  background:#eff3f6;
+}
+
+
+/*和筛选相同的布局*/
+.filter_brand,.filter_model,.filter_spec,.filter_vm{
+  height:auto;
+}
+.filter_long_content{
+  position:relative;
+  padding-left:20rpx;
+  box-sizing:border-box;
+}
+.filter_long_content input{
+  display:inline-block;
+  width:240rpx;
+  line-height:40rpx;
+  text-align:center;
+  border:1rpx solid #eee;
+  border-radius:40rpx;
+  vertical-align:middle;
+  box-sizing: border-box;
+}
+.filter_long_content icon{
+  display:inline-block;
+  vertical-align:middle;
+  padding-bottom:11rpx;
+}
+.icon-jiajian1{
+  margin-left:20rpx;
+}
+.icon-jiajian{
+  margin-right:20rpx;
+}
+.normal{
+  color:black;
+}
+.disabled{
+ color:#ccc;
+}
+
+
+
+
+/*顶部右侧*/
+.classify-right{
+  flex:1;
+  background:#f9fafc;
+  overflow-y: scroll;
+}
+
+/**/
+/* 筛选列表 */
+.filter{
+  height:100%;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.filter_g{
+  margin-bottom:15rpx;
+}
+.filter_search{
+  position:relative;
+  display:inline-block;
+}
+.filter_search input{
+  display:inline-block;
+  vertical-align:middle;
+  padding-left:10rpx;
+  width:316rpx;
+  margin-left:30rpx;
+  border:1px solid #eee;
+  border-radius:10rpx;
+}
+/* input搜索完成弹出框 */
+.filter_search_content{
+  position:absolute;
+  width:329rpx;
+  height:188rpx;
+  padding:0 20rpx;
+  margin-left:30rpx;
+  border:1px solid #eee;
+  border-radius:8rpx;
+  background:#fff;
+  box-sizing:border-box;
+  top:64rpx;
+  z-index:10;
+  overflow-y: scroll;
+}
+.filter_search_content view{
+  height:60rpx;
+  line-height:60rpx;
+  border-bottom:1px solid #eee;
+}
+.filter_brand_title,.filter_model_title,.filter_spec_title,.filter_vm_title,.filter_long_title{
+  position:relative;
+  line-height:76rpx;
+  padding-left:20rpx;
+  margin-bottom:8rpx;
+  font-size:28rpx;
+}
+.filter .filter_g>view:nth-child(2) text{
+  display:inline-block;
+  line-height:80rpx;
+  background:#fff;
+  text-align:center;
+  padding:0 20rpx;
+  box-sizing: border-box;
+  margin:10rpx 10rpx;
+  border-radius:15rpx;
+}
+.filter_brand{
+  height:auto;
+}
+/* 筛选里面的品牌占位 */
+.slot{
+  display:inline-block;
+  line-height:58rpx;
+  background:#eff3f6;
+  text-align:center;
+  padding:0 20rpx;
+  box-sizing:border-box;
+  border-radius:15rpx;
+  margin-left:30rpx;
+  vertical-align: middle;
+}
+.slotcontent{
+  vertical-align:middle;
+}
+.slot icon{
+  vertical-align:middle;
+}
+/**/
+
+
+/*分类底部*/
+.classify-bottom{
+  display:flex;
+  width:100%;
+  height:100rpx;
+  justify-content: space-between;
+  padding:20rpx 60rpx;
+  box-sizing: border-box;
+}
+.classify-bottom view{
+  width:285rpx;
+  height:62rpx;
+  line-height:62rpx;
+  text-align:center;
+  border:1px solid #b4b4b4;
+  border-radius:10rpx;
+  letter-spacing: 8rpx;
+}
+.classify-bottom view:first-child{
+  background:#fff;
+  color:#b4b4b4;
+}
+.classify-bottom view:last-child{
+  background:#0075c2;
+  color:#fff;
+  border:1px solid #0075c2;
+}

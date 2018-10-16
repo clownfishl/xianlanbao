@@ -1,0 +1,99 @@
+/* pages/ucenter/addres/address.wxss */
+.icon-weixuanzhong2:before{content:'\e64c';}
+.icon-weixuanzhong4:before{content:'\e737';color:#0075c1;}
+.icon-shanchu:before{content:'\e6ee';}
+.icon-bianji:before{content:'\e629';}
+.icon-jia:before{content:'\e67d';color:red;font-size: 45rpx;vertical-align: middle;padding-right:10rpx;}
+.icon-arrowright:before{content:'\e62e';font-size: 50rpx;vertical-align: middle;}
+page{
+  height:100%;
+  width: 100%;
+}
+.container{
+  position:relative;
+  height: 100%;
+  width: 100%;
+  padding:20rpx;
+  background:#f8f8fa;
+  box-sizing: border-box;
+  padding-bottom:100rpx;
+  overflow-y: scroll;
+}
+.section{
+  width:100%;
+  margin-bottom:20rpx;
+  border:1rpx solid #eee;
+  background:#fff;
+  box-sizing: border-box;
+}
+.top{
+  display:flex;
+  width:100%;
+  padding:0 20rpx;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.top_left{
+  flex:8;
+}
+.top_left_person{
+  height:80rpx;
+  line-height:93rpx;
+}
+.top_left_person .name{
+  margin-right:50rpx;
+}
+.top_left_address{
+  padding:20rpx 0;
+}
+.top_right{
+  flex:2;
+}
+.top_right view{
+  height:64rpx;
+  width:120rpx;
+  margin-top:20rpx;
+  line-height: 64rpx;
+  text-align: center;
+  border:1rpx solid #0075c1;
+  color:#0075c1;
+  border-radius:35rpx;
+}
+.bottom{
+  display: flex;
+  height:100rpx;
+  line-height:100rpx;
+  padding:0 20rpx;
+  font-size: 32rpx;
+  border-top:1rpx solid #eee;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.bottom_right view{
+  display: inline-block;
+}
+.bottom_right>view{
+  width:108rpx;
+}
+.bottom_right .edit{
+  margin-right:30rpx;
+}
+.bottom_right .delete{
+ margin-right:10rpx;
+}
+.addressadd{
+  position:fixed;
+  display: flex;
+  height:80rpx;
+  width:100%;
+  padding:0 20rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  bottom:0;
+  left:0;
+  border-top:1rpx solid #ddd;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}

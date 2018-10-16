@@ -1,0 +1,124 @@
+<view class="contain">
+  <view class="classify">
+    <view class="classify-top">
+      <!-- 左侧 -->
+      <view class="classify-left">
+         <view class="use">用途</view>
+         <view><text bindtap="selectNav" style="{{curnav == item.id?'border-bottom:5rpx solid #2b8bc8':'border-bottom:5rpx solid #fff'}}" wx:for="{{navlist}}" wx:key="item" data-index="{{index}}" data-id="{{item.id}}">{{item.name}}</text></view>
+      </view>
+      <!-- 右侧 -->
+      <view class="classify-right">
+
+        <block>
+          <view class="filter">
+            <block  wx:for="{{curlist[curindex]}}" wx:key="unique">
+
+            <!-- brand品牌 -->
+              <view class="filter_brand filter_g"  data-id="{{item.id}}">
+                <view class="filter_brand_title">
+                  <text style="vertical-align:middle;">品牌</text>
+                  <!-- input搜索框 -->
+                  <view class="filter_search" data-id="1" wx:if="{{!item.slot_show1}}">
+                    <input type="text" placeholder="输入你想查找的品牌" bindconfirm="complete1"/>
+                    <!-- input搜索弹出框 -->
+                    <view class="filter_search_content" wx:if="{{item.input_complete1}}" >
+                      <view wx:for="{{item.input_end1}}" wx:key="id" bindtap="inputItemSelect1" data-val="{{item.name}}">{{item.name}}</view>
+                    </view>
+                  </view>
+                  <!-- 选中时的显示 -->
+                  <view class="slot" wx:if="{{item.slot_show1}}">
+                    <text class="slotcontent">{{item.slot_content1}}</text>
+                    <icon class="iconfont icon-guanbi1" bindtap="close1"></icon>
+                  </view>
+                </view>
+                <view  class="filter_brand_content">
+                  <text wx:for="{{item.filter_brandlist}}" wx:key="*this" data-val="{{item.name}}" bindtap='selected1'>{{item.name}}</text>
+                </view>
+              </view>
+              <!-- 型号model -->
+              <view class="filter_model filter_g">
+                <view class="filter_model_title">
+                  <text style="vertical-align:middle;">型号</text>
+                  <!-- input搜索框 -->
+                  <view class="filter_search" data-id="2" wx:if="{{!item.slot_show2}}">
+                    <input type="text" placeholder="输入你想查找的品牌" bindconfirm="complete2"/>
+                    <!-- input搜索弹出框 -->
+                    <view class="filter_search_content" wx:if="{{item.input_complete2}}" >
+                      <view wx:for="{{item.input_end2}}" wx:key="id2" bindtap="inputItemSelect2" data-val="{{item.name}}">{{item.name}}</view>
+                    </view>
+                  </view>
+                  <!-- 选中时的显示 -->
+                  <view class="slot" wx:if="{{item.slot_show2}}">
+                    <text class="slotcontent">{{item.slot_content2}}</text>
+                    <icon class="iconfont icon-guanbi1" bindtap="close2"></icon>
+                  </view>
+                </view>
+                <view  class="filter_model_content">
+                  <text wx:for="{{item.filter_modellist}}" wx:key="*this2" data-val="{{item.name}}" bindtap='selected2'>{{item.name}}</text>
+                </view>
+              </view>
+              <!-- 规格spec -->
+              <view class="filter_spec filter_g">
+                <view class="filter_spec_title">
+                  <text style="vertical-align:middle;">规格</text>
+                  <!-- input搜索框 -->
+                  <view class="filter_search" data-id="3" wx:if="{{!item.slot_show3}}">
+                    <input type="text" placeholder="输入你想查找的品牌" bindconfirm="complete3"/>
+                    <!-- input搜索弹出框 -->
+                    <view class="filter_search_content" wx:if="{{item.input_complete3}}">
+                      <view wx:for="{{item.input_end3}}" wx:key="id3" bindtap="inputItemSelect3" data-val="{{item.name}}">{{item.name}}</view>
+                    </view>
+                  </view>
+                  <!-- 选中时的显示 -->
+                  <view class="slot" wx:if="{{item.slot_show3}}">
+                    <text class="slotcontent">{{item.slot_content3}}</text>
+                    <icon class="iconfont icon-guanbi1" bindtap="close3"></icon>
+                  </view>
+                </view>
+                <view  class="filter_spec_content">
+                  <text wx:for="{{item.filter_speclist}}" wx:key="*this3" data-val="{{item.name}}" bindtap='selected3'>{{item.name}}</text>
+                </view>
+              </view>
+              <!-- 电压vm -->
+              <view class="filter_vm filter_g">
+                <view class="filter_vm_title">
+                  <text style="vertical-align:middle;">电压</text>
+                  <!-- input搜索框 -->
+                  <view class="filter_search" data-id="4" wx:if="{{!item.slot_show4}}">
+                    <input type="text" placeholder="输入你想查找的品牌" bindconfirm="complete4"/>
+                    <!-- input搜索弹出框 -->
+                    <view class="filter_search_content" wx:if="{{item.input_complete4}}" >
+                      <view wx:for="{{item.input_end4}}" wx:key="id4" bindtap="inputItemSelect4" data-val="{{item.name}}">{{item.name}}</view>
+                    </view>
+                  </view>
+                  <!-- 选中时的显示 -->
+                  <view class="slot" wx:if="{{item.slot_show4}}">
+                    <text class="slotcontent">{{item.slot_content4}}</text>
+                    <icon class="iconfont icon-guanbi1" bindtap="close4"></icon>
+                  </view>
+                </view>
+                <view class="filter_vm_content">
+                  <text wx:for="{{item.filter_vmlist}}" wx:key="*this4" data-val="{{item.name}}" bindtap='selected4'>{{item.name}}</text>
+                </view>
+              </view>
+              <!-- 长度 -->
+              <view class="filter_long filter_g">
+                <view class="filter_long_title">最小长度</view>
+                <view class="filter_long_content">
+                  <icon class="iconfont icon-jiajian {{item.unnormal}}" bindtap="plus"></icon>
+                  <input type="number" bindchange="changevalue" value="{{item.num}}"/>
+                  <icon class="iconfont icon-jiajian1 normal" bindtap="minus"></icon>
+                </view>
+              </view>
+            </block>
+          </view>
+        </block>
+
+      </view>
+    </view>
+    <view class="classify-bottom">
+       <view bindtap="reset">重置</view>
+       <view bindtap="sure">确定</view>
+    </view>
+  </view>
+</view>

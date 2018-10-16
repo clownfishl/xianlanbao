@@ -1,0 +1,92 @@
+/* pages/ucenter/address/addressEdit/addressEdit.wxss */
+.icon-weixuanzhong2:before{content:'\e64c';}
+.icon-weixuanzhong4:before{content:'\e737';color:#0075c1;}
+page{
+  height:100%;
+  width: 100%;
+}
+.container{
+  height: 100%;
+  width: 100%;
+  padding:20rpx;
+  padding-top: 0;
+  background:#fff;
+  box-sizing: border-box;
+}
+.section{
+  display:flex;
+  height:120rpx;
+  border-bottom: 1rpx solid #ddd;
+  justify-content: flex-start;
+  align-items: center;
+}
+.section__title{
+  height:120rpx;
+  flex:1;
+  margin-right:30rpx;
+  padding-left:20rpx;
+  font-size: 36rpx;
+  line-height: 120rpx;
+  text-align: left;
+  box-sizing: border-box;
+}
+.section input{
+  height:120rpx;
+  flex:3;
+  font-size: 33rpx;
+  line-height: 120rpx;
+}
+/**/
+.section picker{
+  flex:3;
+}
+.section .picker{
+  display:flex;
+  align-items: center;
+  height:120rpx;
+}
+.section .picker text{
+  display:inline-block;
+  height:120rpx;
+  margin-right:30rpx;
+  line-height: 120rpx;
+  text-align:center;
+  font-size: 33rpx;
+}
+.section .picker text:last-child{
+  margin-right:0rpx;
+}
+.selectdefault{
+  height:120rpx;
+  line-height: 120rpx;
+  margin-top:5rpx;
+  font-size: 34rpx;
+}
+.selectdefault icon{
+  vertical-align: middle;
+  margin:0 15rpx;
+  font-size:40rpx;
+}
+.btn-area button{
+  width:90%;
+  height:93rpx;
+  margin:0 auto;
+  line-height: 93rpx;
+  letter-spacing: 4rpx;
+  border-radius:50rpx;
+  font-size: 38rpx;
+}
+.btn-area button::after{
+  border:none;
+}
+.btn-area button:first-child{
+  margin-top:183rpx;
+  background:#0075c1;
+  color:#fff;
+}
+.btn-area button:last-child{
+  margin-top:30rpx;
+  background:#f8f8fa;
+  color:#000;
+  border:1rpx solid #ddd;
+}

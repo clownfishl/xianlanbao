@@ -1,0 +1,46 @@
+<!--pages/ucenter/addres/address.wxml-->
+<view class="container">
+  <block wx:for="{{addressData}}" wx:key="addressItem">
+    <view class="section">
+      <view class="top">
+        <view class="top_left">
+          <view class="top_left_person">
+            <text class="name">{{item.name}}</text>
+            <text class="phone">{{item.phone}}</text>
+          </view>
+          <view class="top_left_address">
+            收货地址：{{item.address}}{{item.addressDetail}}
+          </view>
+        </view>
+        <view class="top_right">
+          <view wx:if="{{item.isdefault}}">默认</view>
+        </view>
+      </view>
+      <view class="bottom">
+        <view class="bottom_left" bindtap="selectDefault" data-index="{{index}}">
+          <icon class="iconfont {{item.isdefault?'icon-weixuanzhong4':'icon-weixuanzhong2'}}"></icon>
+          选为默认地址
+        </view>
+        <view class="bottom_right">
+          <view class="edit" bindtap="addressEdit" data-id="{{item.id}}" data-index="{{index}}">
+            <icon class="iconfont icon-bianji"></icon>
+            编辑
+          </view>
+          <view class="delete" bindtap="addressDelete" data-index="{{index}}" data-id="{{item.id}}">
+            <icon class="iconfont icon-shanchu"></icon>
+            删除
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <navigator url="./addressAdd/addressAdd" hover-class="navigator-hover">
+    <view class="addressadd">
+      <view>
+        <icon class="iconfont icon-jia"></icon>
+        新增收货地址
+      </view>
+      <icon class="iconfont icon-arrowright"></icon>
+    </view>
+  </navigator>
+</view>

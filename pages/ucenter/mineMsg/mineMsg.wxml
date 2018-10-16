@@ -1,0 +1,17 @@
+<!--pages/ucenter/mineMsg/mineMsg.wxml-->
+<view class="contain">
+  <view class="top">
+      <block wx:for="{{navList}}" wx:key="item">
+        <view class="{{actNav == index?'act':''}}" bindtap="clkNav"  data-index="{{index}}" >{{item}}</view>
+      </block>
+  </view>
+  <view class="center">
+    <block wx:for="{{msgList}}" wx:key="this">
+      <view class="msg_detail" bindtap="readChange" data-index="{{index}}">
+        <icon class="iconfont icon-dian" style="color:{{item.isread?'#999':'#0075c1'}}"></icon>
+        <text class="{{item.ispull?'unelli':'elli'}}" style="color:{{item.isread?'#999':'#0075c1'}};">{{item.content}}</text>
+        <icon class="iconfont {{item.ispull?'icon-sanjiaojiantoutriangular-copy':'icon-sort_desc'}}"></icon>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,44 @@
+<!--pages/catalog/cart/con_order/con_order.wxml-->
+
+<view class='container'>
+  <!--收货地址 -->
+  <view class='address_details bg'>
+    <view>
+      收货信息：
+      <text class="receiver">王铁柱 </text>
+      <text class="phone">12354525625</text>
+      <text class='mo_invoice'>修改</text>
+    </view>
+    <view class='mo_address'>
+      <view class='default'>默认</view>
+      <view class='default_right'>收货地址：<text>江苏省南京市苏州路136号1幢130</text></view>
+    </view>
+  </view>
+
+  <view class='order_details bg'>
+    <view>商品名称 <text>远东电缆</text></view>
+      <view>型号 <text>yjv</text></view>
+      <view>电压 <text>0.6/1kv </text></view>
+      <view>规格 <text>3*50</text></view>
+      <view>数量
+        <view class="numb">
+          <icon class="iconfont icon-jiajian {{unnormal}}" bindtap="plus"></icon>
+          <input type="number" bindchange="changevalue" value="{{num}}"/>
+          <icon class="iconfont icon-jiajian1 normal" bindtap="minus"></icon>
+        </view>
+      </view>
+      <view>单价 <text>￥240元/米</text></view>
+  </view>
+  <view class='order_invoice bg'>
+    <text>发票</text>
+    <text class='no_invoice'>不需要发票</text>
+  </view>
+
+  <view class='bottom_order'>
+    <view>
+      合计金额:￥
+      <text>10000.00</text>
+    </view>
+    <button  bindtap='pay'>生成订单</button>
+  </view>
+</view>

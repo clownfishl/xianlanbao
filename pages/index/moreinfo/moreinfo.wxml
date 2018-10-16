@@ -1,0 +1,172 @@
+<!--pages/index/moreinfo/moreinfo.wxml-->
+<view class="contain public">
+
+  <!-- 头部列表 -->
+  <view class="title">
+    <view class="title_l">
+      <view bindtap="pushBrand">{{brand}}<icon class='iconfont {{pushbrand? "icon-up1":"icon-down"}}'></icon></view>
+      <view bindtap="pushModel">{{model}} <icon class='iconfont {{pushmodel? "icon-up1":"icon-down"}}'></icon></view>
+      <view bindtap="pushScale">{{scale}}<icon class='iconfont {{pushscale? "icon-up1":"icon-down"}}'></icon></view>
+    </view>
+    <view class="title_r" bindtap="filter">筛选 <icon class="iconfont icon-shaixuan"></icon></view>
+  </view>
+
+  <!-- 头部列表弹出框list -->
+  <view class="list"  wx:if="{{pushbrand}}">
+    <view  wx:for="{{brandlist}}" wx:key="item" data-id="{{item.id}}" data-val="{{item.name}}" bindtap="brandItem">{{item.name}}</view>
+    <view class="listmore" bindtap="filter">查找更多</view>
+  </view>
+  <view class="list" wx:if="{{pushmodel}}">
+    <view wx:for="{{modellist}}" wx:key="item" data-id="{{item.id}}" data-val="{{item.name}}" bindtap="modelItem">{{item.name}}</view>
+    <view class="listmore" bindtap="filter">查找更多</view>
+  </view>
+  <view class="list" wx:if="{{pushscale}}">
+    <view wx:for="{{scalelist}}" wx:key="item" data-id="{{item.id}}" data-val="{{item.name}}" bindtap="scaleItem">{{item.name}}</view>
+    <view class="listmore" bindtap="filter">查找更多</view>
+  </view>
+
+  <!-- 筛选列表 -->
+  <view class="filter" style="left:{{isfilter?'0':'100%'}}">
+
+    <block>
+      <view class="filter_brand filter_g">
+        <view class="filter_brand_title">
+          <text style="vertical-align:middle;">品牌</text>
+          <!-- input搜索框 -->
+          <view class="filter_search" data-id="1" wx:if="{{!slot_show1}}">
+            <input type="text" placeholder="输入你想查找的品牌" bindconfirm="complete1"/>
+            <!-- input搜索弹出框 -->
+            <view class="filter_search_content" wx:if="{{input_complete1}}" >
+              <view wx:for="{{input_end1}}" wx:key="id" bindtap="inputItemSelect1" data-val="{{item.name}}">{{item.name}}</view>
+            </view>
+          </view>
+          <!-- 选中时的显示 -->
+          <view class="slot" wx:if="{{slot_show1}}">
+            <text class="slotcontent">{{slot_content1}}</text>
+            <icon class="iconfont icon-guanbi1" bindtap="close1"></icon>
+          </view>
+        </view>
+        <view  class="filter_brand_content">
+          <text wx:for="{{filter_brandlist}}" wx:key="*this" data-val="{{item.name}}" bindtap='selected1'>{{item.name}}</text>
+        </view>
+      </view>
+    </block>
+    <block>
+      <view class="filter_model filter_g">
+        <view class="filter_model_title">
+          <text style="vertical-align:middle;">型号</text>
+          <!-- input搜索框 -->
+          <view class="filter_search" data-id="2" wx:if="{{!slot_show2}}">
+            <input type="text" placeholder="输入你想查找的品牌" bindconfirm="complete2"/>
+            <!-- input搜索弹出框 -->
+            <view class="filter_search_content" wx:if="{{input_complete2}}" >
+              <view wx:for="{{input_end2}}" wx:key="id" bindtap="inputItemSelect2" data-val="{{item.name}}">{{item.name}}</view>
+            </view>
+          </view>
+          <!-- 选中时的显示 -->
+          <view class="slot" wx:if="{{slot_show2}}">
+            <text class="slotcontent">{{slot_content2}}</text>
+            <icon class="iconfont icon-guanbi1" bindtap="close2"></icon>
+          </view>
+        </view>
+        <view  class="filter_model_content">
+          <text wx:for="{{filter_modellist}}" wx:key="*this" data-val="{{item.name}}" bindtap='selected2'>{{item.name}}</text>
+        </view>
+      </view>
+    </block>
+    <block>
+      <view class="filter_spec filter_g">
+        <view class="filter_spec_title">
+          <text style="vertical-align:middle;">规则</text>
+          <!-- input搜索框 -->
+          <view class="filter_search" data-id="3" wx:if="{{!slot_show3}}">
+            <input type="text" placeholder="输入你想查找的品牌" bindconfirm="complete3"/>
+            <!-- input搜索弹出框 -->
+            <view class="filter_search_content" wx:if="{{input_complete3}}">
+              <view wx:for="{{input_end3}}" wx:key="id" bindtap="inputItemSelect3" data-val="{{item.name}}">{{item.name}}</view>
+            </view>
+          </view>
+          <!-- 选中时的显示 -->
+          <view class="slot" wx:if="{{slot_show3}}">
+            <text class="slotcontent">{{slot_content3}}</text>
+            <icon class="iconfont icon-guanbi1" bindtap="close3"></icon>
+          </view>
+        </view>
+        <view  class="filter_spec_content">
+          <text wx:for="{{filter_scalelist}}" wx:key="*this" data-val="{{item.name}}" bindtap='selected3'>{{item.name}}</text>
+        </view>
+      </view>
+    </block>
+    <block>
+      <view class="filter_vm filter_g">
+        <view class="filter_vm_title">
+          <text style="vertical-align:middle;">电压</text>
+          <!-- input搜索框 -->
+          <view class="filter_search" data-id="4" wx:if="{{!slot_show4}}">
+            <input type="text" placeholder="输入你想查找的品牌" bindconfirm="complete4"/>
+            <!-- input搜索弹出框 -->
+            <view class="filter_search_content" wx:if="{{input_complete4}}" >
+              <view wx:for="{{input_end4}}" wx:key="id" bindtap="inputItemSelect4" data-val="{{item.name}}">{{item.name}}</view>
+            </view>
+          </view>
+          <!-- 选中时的显示 -->
+          <view class="slot" wx:if="{{slot_show4}}">
+            <text class="slotcontent">{{slot_content4}}</text>
+            <icon class="iconfont icon-guanbi1" bindtap="close4"></icon>
+          </view>
+        </view>
+        <!-- 搜索的列表 -->
+        <view class="filter_vm_content">
+          <text wx:for="{{filter_voltagelist}}" wx:key="*this" data-val="{{item.name}}" bindtap='selected4'>{{item.name}}</text>
+        </view>
+      </view>
+    </block>
+    <!-- 长度选择 -->
+    <view class="filter_long filter_g">
+      <view class="filter_long_title">长度</view>
+      <view class="filter_long_content">
+        <icon class="iconfont icon-jiajian {{unnormal}}" bindtap="plus"></icon>
+        <input type="number" bindchange="changevalue" value="{{num}}"/>
+        <icon class="iconfont icon-jiajian1 normal" bindtap="minus"></icon>
+      </view>
+    </view>
+    <!-- 发货地选择 -->
+    <view class="section">
+      <view class="section__title">发货地选择</view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker"><text>{{region[0]}}</text>，<text>{{region[1]}}</text>，<text>{{region[2]}}</text>
+        </view>
+      </picker>
+    </view>
+
+    <view class="filter_btn">
+      <view bindtap="reset">重置</view>
+      <view bindtap="filterSure">确定</view>
+    </view>
+
+  </view>
+
+
+  <!-- 现货列表 -->
+  <block wx:for="{{goodList}}" wx:key="*this">
+    <view class="total_msg goodlist" wx:if="{{item.isshow}}">
+      <view class='first' bindtap='details'>
+        <view>
+          <text class='name text'>{{item.brand}}</text>
+          <text class='category text'>{{item.model}}</text>
+        </view>
+        <view>
+          <text class='spec text'>{{item.scale}}</text>
+          <text class='seller text'>{{item.voltage}}</text>
+        </view>
+        <view>
+          <view class="starl">
+            <image wx:for="{{item.total_img}}" wx:for-item="imgitem" wx:key="unique" src="{{imgitem.src}}"></image>
+          </view>
+          <text class='seller text'>总长{{item.total}}</text>
+          <view class="select" bindtap="selectBuy" data-id="{{item.id}}">选购</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
